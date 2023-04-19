@@ -1,8 +1,7 @@
 #!/bin/bash
 
-# Remove useless files and reset permissions in a Laravel project
-
 SCRIPTPATH="$( cd -- "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )"
+echo $SCRIPTPATH
 
 # Remove useless files
 find $SCRIPTPATH -maxdepth 1 \
@@ -48,13 +47,13 @@ for FILE in \
 	$SCRIPTPATH/vendor/bin/var-dump-server \
 	$SCRIPTPATH/vendor/league/commonmark/bin/commonmark \
 	$SCRIPTPATH/vendor/nesbot/carbon/bin/carbon \
-	$SCRIPTPATH/vendor/nikic/php-parser/bin/php-parse
+	$SCRIPTPATH/vendor/nikic/php-parser/bin/php-parse \
 	$SCRIPTPATH/vendor/phpunit/phpunit/phpunit \
 	$SCRIPTPATH/vendor/psy/psysh/bin/psysh \
 	$SCRIPTPATH/vendor/sebastian/resource-operations/build/generate.php \
 	$SCRIPTPATH/vendor/symfony/error-handler/Resources/bin/extract-tentative-return-types.php \
 	$SCRIPTPATH/vendor/symfony/error-handler/Resources/bin/patch-type-declarations \
-	$SCRIPTPATH/vendor/symfony/var-dumper/Resources/bin/var-dump-server \
+	$SCRIPTPATH/vendor/symfony/var-dumper/Resources/bin/var-dump-server
 do
 	chmod 754 $FILE
 done
