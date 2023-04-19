@@ -1,7 +1,8 @@
 #!/bin/bash
 
+# Remove useless files and reset permissions in a Laravel project
+
 SCRIPTPATH="$( cd -- "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )"
-echo $SCRIPTPATH
 
 # Remove useless files
 find $SCRIPTPATH -maxdepth 1 \
