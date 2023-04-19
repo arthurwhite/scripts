@@ -37,7 +37,7 @@ find $SCRIPTPATH -type d -exec chmod 2755 {} +
 
 # Reset executables
 for FILE in \
-	$SCRIPTPATH/clean.sh \
+	$SCRIPTPATH/laravelcleanup.sh \
 	$SCRIPTPATH/artisan \
 	$SCRIPTPATH/vendor/bin/carbon \
 	$SCRIPTPATH/vendor/bin/commonmark \
