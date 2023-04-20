@@ -32,8 +32,8 @@ find $SCRIPTPATH -maxdepth 1 \
 	-exec rm -rf {} +
 
 # Reset rights
-find $SCRIPTPATH -type f -exec chmod 644 {} +
-find $SCRIPTPATH -type d -exec chmod 2755 {} +
+find $SCRIPTPATH -type f -exec chmod 640 {} +
+find $SCRIPTPATH -type d -exec chmod 2750 {} +
 
 # Reset executables
 for FILE in \
@@ -56,9 +56,9 @@ for FILE in \
 	$SCRIPTPATH/vendor/symfony/error-handler/Resources/bin/patch-type-declarations \
 	$SCRIPTPATH/vendor/symfony/var-dumper/Resources/bin/var-dump-server
 do
-	chmod 754 $FILE
+	chmod 750 $FILE
 done
 
 # Reset storage writing
-chmod 2777 $SCRIPTPATH/public/storage
+chmod 2770 $SCRIPTPATH/public/storage
 chmod -R g+w $SCRIPTPATH/storage
