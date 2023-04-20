@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Remove useless files and reset permissions in a Laravel project
+# Remove useless files and reset permissions in a Laravel project, for LAMP hosting
 
 SCRIPTPATH="$( cd -- "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )"
 
